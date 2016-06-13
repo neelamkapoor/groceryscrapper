@@ -1,31 +1,31 @@
 # groceryscrapper
 
-Scenario 1: Sainsbury Ripe and Ready link Should return json string containing product properties
+######Scenario 1: Sainsbury Ripe and Ready link Should return json string containing product properties
 	Given that A user types Fresh fruit link
 	When he uses Ripe and Ready url 
 	Then It should return a json string with title, unit_price, size and description
 	And total field which is a sum of all unit prices on the page.
 
-Requires :
+######Requires :
 	Java 1.7 or above
 	Maven
 	Dependencies : Apache httpclient, jsoup, guava, gson, slf4j with log4j
 
-How to set up on local machine:
+######How to set up on local machine:
 	Git clone
 	Run 'mvn clean install' from project root folder
 
-How to run unit test:
+######How to run unit test:
 	Run the following command from project root folder
 		mvn test
 		   
-How to execute:
+######How to execute:
 	Create the jar file using the following command (Created at Project Root/target folder)
 		mvn clean install
 	Run the following to verify
 		java -jar scrapperExercise-jar-with-dependencies.jar http://www.sainsburys.co.uk/shop/gb/groceries/fruit-veg/ripe---ready
 
-Expect:
+######Expect:
 	A json string - 
 	DEBUG [main] (GroceryApplication.java:60) - Json String 
 	{"results": [{"title": "Sainsbury's Apricot Ripe & Ready x5","size": "39.9 kb", "unitPrice": 3.0, "description": "Apricots" },
@@ -45,7 +45,8 @@ Expect:
   	"total": 24.3
 	} 	
 	
-TODO:
+######TODO:
+	URL validation
 	customised exception handling
 	Integration tests
 	Test cased for HTTP Service implementaion
